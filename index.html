@@ -1,21 +1,23 @@
 <script>
+    // Get the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectParam = urlParams.get('redirect');
+    const unsubParam = urlParams.get('unsub');
 
-const urlParams = new URLSearchParams(window.location.search);
+    // Define the base URLs for redirection
+    const redirectBaseURL = 'https://www.renwsite.com/26HWGT72/7D9CHXH2/1/';
+    const unsubBaseURL = 'https://www.oceanoscarkey.com/o-ngjc-g52-8cd7aaa09058e8999dac602e692101d5/1/';
 
-
-const siteParam = urlParams.get('site');
-
-
-if (siteParam) {
-
-  
-        const redirectURL = `https://whiskcip.com/0/0/0/16bc6f9af7817fe7cce2e706a574863e/1/${siteParam}`;
-        
-        
+    // Determine the redirect URL based on the parameter
+    let redirectURL;
+    if (redirectParam) {
+        redirectURL = redirectBaseURL;
         window.location.href = redirectURL;
-  
-} else {
-
-    const redirectURL = `https://whiskcip.com/0/0/0/16bc6f9af7817fe7cce2e706a574863e/1/random`;
-}
+    } else if (unsubParam) {
+        redirectURL = unsubBaseURL;
+        window.location.href = redirectURL;
+    } else {
+        // Default to Google if neither redirect nor unsub is provided
+        window.location.href = 'https://www.google.com';
+    }
 </script>
